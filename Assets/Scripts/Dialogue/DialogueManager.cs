@@ -7,27 +7,34 @@ public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public GameObject dialoguePanel;
     public float typingSpeed;
-
-    public Animator animator;
 
     private Queue<string> _sentences;
     private Queue<string> _names;
 
     public bool isDialogueRunning;
 
-    // Start is called before the first frame update
-    void Start()
+    public Event dialogueStarted;
+    public Event dialogueEnded;
+
+    private void Awake()
     {
         _sentences = new Queue<string>();
         _names = new Queue<string>();
 
-        animator.SetBool("isOpen", false);
+        dialoguePanel.SetActive(false);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     private void Update()
     {
-        if (isDialogueRunning && Input.GetButtonDown("Interact"))
+        if (isDialogueRunning && Input.GetButtonDown("Jump"))
         {
             DisplayNextSentence();
         }
@@ -38,7 +45,8 @@ public class DialogueManager : MonoBehaviour
         if (isDialogueRunning == false)
         {
             isDialogueRunning = true;
-            animator.SetBool("isOpen", isDialogueRunning);
+            dialoguePanel.SetActive(true);
+            dialogueStarted.EventOccurred();
 
             _sentences.Clear();
             _names.Clear();
@@ -91,6 +99,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isDialogueRunning = false;
-        animator.SetBool("isOpen", isDialogueRunning);
+        dialoguePanel.SetActive(isDialogueRunning);
+        dialogueEnded.EventOccurred();
     }
 }

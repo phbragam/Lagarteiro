@@ -54,4 +54,15 @@ public class PlayerAnimatorManager : MonoBehaviour
     {
         anim.SetBool("IsMounting", true);
     }
+
+    
+    public void DisableMovement()
+    {
+        mp.speed = 0;
+    }
+
+    public void EnableMovement()
+    {
+        mp.UpdateSpeed();
+    }
 }

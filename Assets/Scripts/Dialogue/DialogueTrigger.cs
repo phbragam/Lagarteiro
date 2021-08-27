@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    protected Dialogue dialogue;
+    public Dialogue dialogue;
     protected DialogueManager dm;
 
-    protected virtual void Start()
+    void Awake()
     {
         dm = FindObjectOfType<DialogueManager>();
+        
+    }
+
+    private void Start()
+    {
+        dm.StartDialogue(dialogue);
     }
 
 
@@ -20,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        dm.StartDialogue(dialogue);
+        
     }
 }
 
