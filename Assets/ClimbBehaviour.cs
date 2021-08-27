@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ClimbBehaviour : StateMachineBehaviour
 {
+    public Event mounted;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -20,6 +21,7 @@ public class ClimbBehaviour : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("IsMounting", false);
+        mounted.EventOccurred();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

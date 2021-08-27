@@ -44,10 +44,10 @@ public class PlayerAnimatorManager : MonoBehaviour
         {
             mp.enabled = false;
         }
-        else
-        {
-            mp.enabled = true;
-        }
+        //else
+        //{
+        //    mp.enabled = true;
+        //}
     }
 
     public void Mount()
@@ -58,11 +58,11 @@ public class PlayerAnimatorManager : MonoBehaviour
     
     public void DisableMovement()
     {
-        mp.speed = 0;
+        mp.enabled = false;
     }
 
     public void EnableMovement()
     {
-        mp.UpdateSpeed();
+        mp.enabled = true;
     }
 }
