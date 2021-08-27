@@ -744,14 +744,38 @@ MonoBehaviour:
   dialogue:
     names:
     - Lagarteiro
+    - Lagarteiro
+    - Engineer
     - Engineer
     - Lagarteiro
     - Engineer
+    - Engineer
+    - Engineer
+    - Engineer
+    - Engineer
+    - Lagarteiro
+    - Lagarteiro
+    - Engineer
+    - Engineer
+    - Engineer
+    - Lagarteiro
     sentences:
-    - Hi! I come in peace. I dont carry a sword. My name is Lagarteiro.
-    - Hi man
-    - Bye man
-    - "Bye \n"
+    - Hi! I came in peace. I don't carry a sword. My name is Lagarteiro.
+    - "\rI've heard you are a great engineer!"
+    - Hi Lagarteiro! I know you are a peaceful man, you have a great energy!
+    - But I am not the engineer that I used to be anymore...
+    - I trust in your work. You are very well known.
+    - I haven't imagined that people still talked about my doings...
+    - I'll tell you what happened...
+    - I've been facing an enigma...
+    - I told myself that I would only get out of this desert after I solved the puzzle...
+    - Years passed and I am still here...
+    - I have an idea!
+    - I can help you with the enigma, and after, you help me with your engineering.
+    - This would be amazing!
+    - But there is a problem.
+    - The puzzle is not yet implemented :(
+    - Oh :(
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

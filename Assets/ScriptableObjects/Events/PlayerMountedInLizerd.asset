@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11afffd4429d3874c82431e405b193df, type: 3}
-  m_Name: Mounted
+  m_Name: PlayerMountedInLizerd
   m_EditorClassIdentifier: 
   eListeners: []
