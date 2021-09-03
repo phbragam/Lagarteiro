@@ -10,6 +10,8 @@ public class AudioManagerScript : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
         activeSceneName = SceneManager.GetActiveScene().name;
 
         foreach (Sound s in sounds)
@@ -19,7 +21,15 @@ public class AudioManagerScript : MonoBehaviour
             s.source.clip = s.clip;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
         }
+
+
+    }
+
+    private void Start()
+    {
+        Play("Music");
     }
 
 
